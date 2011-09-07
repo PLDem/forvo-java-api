@@ -20,6 +20,10 @@ Javadoc
 -------
 TODO: generate javadoc
 
+Issues
+-------
+Forvo JSON output seems strange: sometimes integer values are represented as strings, sometimes as ints. I wrote to forvo team, and I'm waiting for result. I will not use XML instead, because it's too cumbersome, and now I can't use JSON too, because I need to know the type (string/int) of every value. So, development is suspended for some time...
+
 Examples
 --------
 TODO: provide some examples
