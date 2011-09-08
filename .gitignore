@@ -1,0 +1,7 @@
+*.class
+*.jar
+*.swp
+*.txt
+bin/
+lib/
+src/ru/o2genum/forvo/Main.java

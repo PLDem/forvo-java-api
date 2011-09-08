@@ -1,4 +1,4 @@
-package ru.o2genum.forvo.gson;
+package ru.o2genum.forvo.impl.gson;
 
 /**
  * For (pronounced) words search, and popular pronounced words
