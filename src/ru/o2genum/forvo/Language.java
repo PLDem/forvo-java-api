@@ -43,6 +43,7 @@ public class Language {
 
 	/**
 	 * Get all Forvo's currently supported languages
+	 * @throws Exception If there were some problems
 	 */
 	public static List<Language> getLanguageList() throws Exception {
 		return getLanguageList(null, -1);
@@ -64,9 +65,10 @@ public class Language {
 
 	/**
 	 * Get most popular Forvo's languages
+	 * @throws Exception Some troubles
 	 */
-	public List<Language> getPopularLanguages() {
-		return null; // TODO
+	public static List<Language> getPopularLanguages() throws Exception {
+		return getPopularLanguages(null, -1);
 	}
 
 	/**
@@ -74,15 +76,18 @@ public class Language {
 	 * 
 	 * @param order Popular, Name or Code
 	 * @param limit Max. languages to return
+	 * @throws Exception Some troubles
 	 */
-	public List<Language> getPopularLanguages(Order order, int limit) {
-		return getPopularLanguages(null, -1);
+	public static List<Language> getPopularLanguages(Order order, int limit)
+    throws Exception {
+		return Forvo.getPopularLanguages(order, limit);
 	}
 
 	/**
 	 * Get an array of all letters the language contains
 	 */
-	public char[] getLanguageAlphabet() {
-		return null;
+	public char[] getLanguageAlphabet() throws Exception {
+		return Forvo.getLanguageAlphabet(this);
 	}
+	
 }

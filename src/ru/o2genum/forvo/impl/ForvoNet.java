@@ -32,8 +32,10 @@ public class ForvoNet {
 		sb.append("/format/" + format);
 		sb.append("/action/"+action);
 
-		for(String key: params.keySet()) {
-			sb.append("/"+key+"/"+urlEncode(params.get(key)));
+		if(params != null) {
+			for(String key: params.keySet()) {
+				sb.append("/"+key+"/"+urlEncode(params.get(key)));
+			}
 		}
 
 		StringBuilder sb2 = new StringBuilder();
