@@ -12,9 +12,7 @@ The API is very simple: it consists of a few classes:
  * `User` represents a user,
  * `WordAndPronunciation` is a simple container for a `Word`-`Pronunciation` pair.
 
-Class structure is very simple and obvious. 
-
-Note: when you call method (or construct new object) with many perameters, you can omit some of them, providing `null` instead of objects, `-1` instead of some reasonable positive integer values.
+Class structure is very obvious. 
 
 Javadoc
 -------
@@ -22,7 +20,7 @@ TODO: generate javadoc
 
 Issues
 -------
-I used to think that [GSON](http://code.google.com/p/google-gson/) will not parse quoted values such as "100" as integers, but I was wrong: GSON does it.
+ * I used to think that [GSON](http://code.google.com/p/google-gson/) will not parse quoted values such as "100" as integers, but I was wrong: GSON does it.
 
 Examples
 --------
