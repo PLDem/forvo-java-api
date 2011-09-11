@@ -11,7 +11,7 @@ What's next?
 ```java
 import java.util.*;
 
-import ru.o2genum.forvo.*; // This package contains all you ned
+import ru.o2genum.forvo.*; // This package contains all you need
 
 public class Main {
 	public static void main(String[] args) {

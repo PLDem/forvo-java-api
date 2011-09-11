@@ -22,6 +22,6 @@
 	<target name="javadoc">
 		<mkdir dir="javadoc"/>
 		<javadoc sourcepath="src" destdir="javadoc"/>
-		<jar destfile="build/jar/forvo-java-api-javadoc" basedir="javadoc"/>
+		<jar destfile="build/jar/forvo-java-api-javadoc.jar" basedir="javadoc"/>
 	</target>
 </project>
