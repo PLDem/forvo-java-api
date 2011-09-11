@@ -13,13 +13,13 @@ import ru.o2genum.forvo.*;
 public class Main {
 	public static void main(String[] args) {
 		try {
-			ApiKey.setKey(new Scanner(System.in).nextLine());
-			List<WordAndPronunciation> l =
-				new Word("привет").searchPronouncedWords();
-			for(WordAndPronunciation wap : l) {
-				System.out.println(wap.getWord().getWord());
-				System.out.println(wap.getPronunciation()
-						.getAudioURL(Pronunciation.AudioFormat.OGG));
+			Scanner sc = new Scanner(System.in);
+			ApiKey.setKey(sc.nextLine());
+			List<Pronunciation> l =
+				new Word(sc.nextLine()).getPronunciations();
+			for(Pronunciation p : l) {
+				System.out.println(p.getLanguage().getLanguageName());
+				System.out.println(p.getAudioURL(Pronunciation.AudioFormat.OGG));
 			}
 		} catch(Exception ex) {
 			ex.printStackTrace();

@@ -140,7 +140,6 @@ public class ForvoGson {
 						"-1 or > 0");
 			}
 		}
-		System.out.println(ForvoNet.get("word-pronunciations", keysValues));
 		return (WordPronunciations) gson.fromJson(
 				ForvoNet.get("word-pronunciations", keysValues),
 				WordPronunciations.class);
