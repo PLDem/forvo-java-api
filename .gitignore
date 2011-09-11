@@ -1,5 +1,4 @@
 *.class
 *.swp
-javadoc/
 build/classes
 lib/
