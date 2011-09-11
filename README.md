@@ -7,6 +7,7 @@ What's next?
  * Download [GSON](http://code.google.com/p/google-gson/)'s JAR
  * And [Apache Commons Codec](http://commons.apache.org/codec/): my library uses those JARs
  * Have fun!
+
 ```java
 import java.util.*;
 
@@ -42,3 +43,4 @@ public class Main {
 	}
 }
 ```
+Check it out! Don't forget about dependencies. The program will output numerous words and one pronunciation URL for each word. Open the first of the URLs in your browser. Now you know hot to say "hello" in Russian!
