@@ -7,23 +7,30 @@ package ru.o2genum.forvo;
  */
 
 public class User {
+	private Sex sex;
+	private String userName;
+	private String country;
 
 	public enum Sex { Male, Female };
 
-	public User(String userName, Sex sex, String country) {...}
+	public User(String userName, Sex sex, String country) {
+		this.userName = userName;
+		this.sex = sex;
+		this.country = country;
+	}
 
 	/**
 	 * Get user's username
 	 */
-	public String getUserName() {...}
+	public String getUserName() { return userName; }
 
 	/**
 	 * Get user's sex
 	 */
-	public Sex getSex() {...}
+	public Sex getSex() { return sex; }
 
 	/**
 	 * Get user's country (in English)
 	 */
-	public String getCountry() {...}
+	public String getCountry() { return country; }
 }

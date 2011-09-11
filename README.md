@@ -1,31 +1,44 @@
 Forvo Java API
 ==============
-If you're interested in Forvo API, you likely know what Forvo is.
+Forvo pronunciation guide provides a huge database of words and their pronunciations. Luckily, Forvo has [free API](http://api.forvo.com/). Before you begin, you need to register your forvo.com account, obtain your API key, and, of course, read general information about API.
 
-Overview
---------
-The API is very simple: it consists of a few classes:
+What's next?
+============
+ * Download [GSON](http://code.google.com/p/google-gson/)'s JAR
+ * And [Apache Commons Codec](http://commons.apache.org/codec/): my library uses those JARs
+ * Have fun!
+```java
+import java.util.*;
 
- * `Word`, it represents a word, provides some important methods for searching pronunciations, get popular words, etc.,
- * `Pronunciation`, represents a pronunciation,
- * `Language`, represents language and provides methods for getting popular languages, etc.,
- * `User` represents a user,
- * `WordAndPronunciation` is a simple container for a `Word`-`Pronunciation` pair.
+import ru.o2genum.forvo.*; // This package contains all you ned
 
-Class structure is very obvious. 
-
-Javadoc
--------
-TODO: generate javadoc
-
-Issues
--------
- * I used to think that [GSON](http://code.google.com/p/google-gson/) will not parse quoted values such as "100" as integers, but I was wrong: GSON does it.
-
-Examples
---------
-TODO: provide some examples
-
-Et cetera
----------
-Don't forget to read about Forvo API at http://api.forvo.com/documentation/general-information/
+public class Main {
+	public static void main(String[] args) {
+		// API's methods are full of exceptions. So we use try block
+		try {
+			// First of all, we have to set API key. We ask user for it
+			System.out.println("Please, enter your API key and press ENTER:");
+			ApiKey.setKey(new Scanner(System.in).nextLine());
+			// For example, let's search for words like "привет"
+			// and find out their pronounciations.
+			List<WordAndPronunciation> list = 
+				new Word("привет") // We construct new Word object
+					.searchPronouncedWords(); // and search for similar words
+											  // (that have at least one
+											  // pronunciation)
+			// Yeah! Now we have the list of word-pronunciation pairs!
+			// Let's output each found word and it's OGG pronunciation sound
+			for(WordAndPronunciation wap : list) {
+				System.out.println(
+					wap.getWord()    // We get Word from Word-Pronunciation pair
+					.getWord()       // Seems similar, but now we get Word's
+							      ); // String itself.
+			System.out.println(wap.getPronunciation()
+					.getAudioURL(Pronunciation.AudioFormat.OGG);
+			}
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage()); // If something went wrong
+		}
+	}
+}
+```

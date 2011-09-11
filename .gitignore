@@ -1,7 +1,4 @@
 *.class
-*.jar
 *.swp
-*.txt
-bin/
+build/classes
 lib/
-src/ru/o2genum/forvo/Main.java

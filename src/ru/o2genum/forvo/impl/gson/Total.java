@@ -8,5 +8,5 @@ package ru.o2genum.forvo.impl.gson;
 
 public class Total {
 
-	Attributes attributes;
+	public Attributes attributes;
 }
