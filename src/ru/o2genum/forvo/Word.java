@@ -38,7 +38,10 @@ public class Word {
 	public int getId() { return id; }
 
 	/**
-	 * Get string representation of the word
+	 * Get forvo-style representation on the word.
+	 * @returns For example, "to_do", "улица_александра_блока", etc.
+	 * To get "to do" and "улица Александра Блока", use getOriginal() or
+	 * toString()
 	 */
 	public String getWord() { return word; }
 	
@@ -160,4 +163,10 @@ public class Word {
 	public int getTotalPronunciations(Language language) throws Exception {
 		return Forvo.getTotalPronunciations(language);
 	}
+
+	/**
+	 * Get word's string
+	 */
+	@Override
+	public String toString() { return getOriginal(); }
 }
