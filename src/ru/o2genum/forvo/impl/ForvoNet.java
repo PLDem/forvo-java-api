@@ -59,6 +59,6 @@ public class ForvoNet {
 	private static String urlEncode(String str) throws EncoderException {
 		String s = "";
 		s = codec.encode(str); 
-		return s;
+		return s.replace("+", "%20");
 	}
 }
