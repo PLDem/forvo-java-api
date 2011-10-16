@@ -20,17 +20,17 @@ public class User {
 	}
 
 	/**
-	 * Get user's username
+	 * Get the username of the user 
 	 */
 	public String getUserName() { return userName; }
 
 	/**
-	 * Get user's sex
+	 * Get the gender of the user
 	 */
 	public Sex getSex() { return sex; }
 
 	/**
-	 * Get user's country (in English)
+	 * Get the country where the user lives in (in English).
 	 */
 	public String getCountry() { return country; }
 }

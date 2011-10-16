@@ -1,7 +1,7 @@
 package ru.o2genum.forvo;
 
 /**
- * Represents word-pronunciation pair
+ * Represents a word-pronunciation pair
  *
  * @author Andrey Moiseev
  */
@@ -19,7 +19,13 @@ public class WordAndPronunciation {
 		this.pronunciation = pronunciation;
 	}
 
+    /**
+     * Get the word object, obviously
+     */
 	public Word getWord() { return word; }
 
-	public Pronunciation getPronunciation() { return pronunciation; }
+    /**
+     * Get the pronunciation object
+     */
+public Pronunciation getPronunciation() { return pronunciation; }
 }

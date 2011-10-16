@@ -28,14 +28,16 @@ public class Language {
 
 	/**
 	 * Get language code. See all language codes:
-	 * http://www.forvo.com/languages-codes/
+	 * {@link <a href="http://www.forvo.com/languages-codes/">
+     * http://www.forvo.com/languages-codes/
+     * </a>}
 	 */
 	public String getCode() {
 		return code;
 	}
 
 	/**
-	 * Get language name (in English)
+	 * Get the name of the language (in English)
 	 */
 	public String getLanguageName() {
 		return langName;
@@ -54,7 +56,7 @@ public class Language {
 	 * in specified order
 	 *
 	 * @param order Name or Code
-	 * @param minPronunctiations Minimal count of pronunciations
+	 * @param minPronunciations Minimal number of pronunciations
 	 * @throws Exception There could be some exceptions (internet/io problems,
 	 * etc...
 	 */
@@ -90,4 +92,10 @@ public class Language {
 		return Forvo.getLanguageAlphabet(this);
 	}
 	
+    /**
+     * Simply calls {@link #getLanguageName() getLanguageName()}
+     */
+    public String toString() {
+        return getLanguageName();
+    } 
 }

@@ -11,6 +11,9 @@ import java.util.*;
 import ru.o2genum.forvo.*;
 
 public class Main {
+    /**
+     * My playground.
+     */
 	public static void main(String[] args) {
 		try {
 			Scanner sc = new Scanner(System.in);

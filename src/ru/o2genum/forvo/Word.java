@@ -39,31 +39,31 @@ public class Word {
 
 	/**
 	 * Get forvo-style representation on the word.
-	 * @returns For example, "to_do", "улица_александра_блока", etc.
+	 * @return For example, "to_do", "улица_александра_блока", etc.
 	 * To get "to do" and "улица Александра Блока", use getOriginal() or
 	 * toString()
 	 */
 	public String getWord() { return word; }
 	
 	/**
-	 * Get original word
+	 * Get word's string. See the difference from {@link #getWord() getWord()}! 
 	 */
 	public String getOriginal() { return original; }
 
 	/**
-	 * How much pronunciations of the word does forvo know?
+	 * How many pronunciations of the word does forvo know?
 	 */
 	public int getPronunciationsNumber() { return numPronunciations; }
 
 	/**
-	 * Get the list of the word's pronuciations
+	 * Get the list of pronuciations of the word
 	 */
 	public List<Pronunciation> getPronunciations() throws Exception {
 		return getPronunciations(null, null, -1, null, -1);
 	}
 
 	/**
-	 * Get the list of the word's pronuciations
+	 * Get the list of pronunciations of the word
 	 */
 	public List<Pronunciation> getPronunciations(Language language,
 			User user, int rate, Order order, int limit) throws Exception {
@@ -119,7 +119,7 @@ public class Word {
 	}
 
 	/**
-	 * Get popular words
+	 * Get most popular words
 	 */
 	public List<WordAndPronunciation> getPopularPronouncedWords()
 		throws Exception {
@@ -127,7 +127,7 @@ public class Word {
 	}
 
 	/**
-	 * Get popular words
+	 * Get most popular words
 	 */
 	public List<WordAndPronunciation> getPopularPronouncedWords(Language
 			language, int limit) throws Exception {
@@ -135,14 +135,14 @@ public class Word {
 	}
 
 	/**
-	 * Get the number of words what have pronunciations(s)
+	 * Get the number of words that have pronunciations(s)
 	 */
-	public int getTotalPronuncedWords() throws Exception {
+	public int getTotalPronouncedWords() throws Exception {
 		return getTotalPronouncedWords(null);
 	}
 
 	/**
-	 * Get the number of words what have pronunciations(s)
+	 * Get the number of words that have pronunciations(s)
 	 */
 	public int getTotalPronouncedWords(Language language) throws Exception {
 		return Forvo.getTotalPronouncedWords(language);
@@ -165,7 +165,7 @@ public class Word {
 	}
 
 	/**
-	 * Get word's string
+	 * Get word's string. Simply calls {@link #getOriginal() getOriginal()}.
 	 */
 	@Override
 	public String toString() { return getOriginal(); }
