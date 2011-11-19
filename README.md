@@ -30,7 +30,7 @@ public class Main {
 											  // (that have at least one
 											  // pronunciation)
 			// Yeah! Now we have the list of word-pronunciation pairs!
-			// Let's output each found word and it's OGG pronunciation sound
+			// Let's output each found word and its URL of OGG pronunciation sound
 			for(WordAndPronunciation wap : list) {
 				System.out.println(
 					wap.getWord()    // We get Word from Word-Pronunciation pair
@@ -49,4 +49,4 @@ Check it out! Don't forget about dependencies. The program will output numerous 
 
 License
 -------
-Open Source Initiative (OSI) MIT License
+Open Source Initiative (OSI) MIT License.
