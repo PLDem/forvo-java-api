@@ -7,7 +7,7 @@
 	<target name="compile">
 		<mkdir dir="build/classes"/>
 		<javac srcdir="src" destdir="build/classes"
-			classpath="lib/gson-1.7.1.jar:lib/commons-codec-1.5.jar:."/>
+			classpath="lib/htcfixed-gson-1.7.1.jar:lib/commons-codec-1.5.jar:."/>
 	</target>
 	<target name="jar">
 		<mkdir dir="build/jar"/>
@@ -16,7 +16,7 @@
 	</target>
 	<target name="run">
 		<java classname="ru.o2genum.forvo.Main"
-			classpath="lib/gson-1.7.1.jar:lib/commons-codec-1.5.jar:build/classes"
+			classpath="lib/htcfixed-gson-1.7.1.jar:lib/commons-codec-1.5.jar:build/classes"
 			fork="true"/>
 	</target>
 	<target name="javadoc">

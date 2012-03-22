@@ -9,7 +9,7 @@ package ru.o2genum.forvo.impl;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gson.Gson;
+import com.google.htcfix.gson.Gson;
 
 import ru.o2genum.forvo.Language;
 import ru.o2genum.forvo.User;
