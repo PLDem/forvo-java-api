@@ -6,7 +6,7 @@ What's next?
 ============
  * Download [Forvo Java API JAR] (https://github.com/o2genum/forvo-java-api/blob/master/build/jar/forvo-java-api.jar?raw=true)
  * Look for javadoc in `javadoc/` directory or [download it](https://github.com/o2genum/forvo-java-api/blob/master/build/jar/forvo-java-api-javadoc.jar?raw=true)
- * Download [GSON](http://code.google.com/p/google-gson/)'s JAR
+ * Download special [GSON](https://github.com/o2genum/forvo-java-api/blob/master/lib/fixed-gson-1.7.1.jar?raw=true) JAR (fixed for Android HTC)
  * And [Apache Commons Codec](http://commons.apache.org/codec/): my library uses those JARs
  * Have fun!
 
