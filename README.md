@@ -22,6 +22,13 @@ public class Main {
 			// First of all, we have to set API key. We ask user for it
 			System.out.println("Please, enter your API key and press ENTER:");
 			ApiKey.setKey(new Scanner(System.in).nextLine());
+            // Also, we should set request host, it depends on your plan.
+            // For free plan, it is apifree.forvo.com
+            // If you don't call this method, free plan host is the default value.
+            ApiKey.setHost("apifree.forvo.com"); // NEW feature!
+            /* Or:
+               ApiKey.setHost("apipremium.forvo.com"); // For premium
+            */
 			// For example, let's search for words like "привет"
 			// and find out their pronounciations.
 			List<WordAndPronunciation> list = 

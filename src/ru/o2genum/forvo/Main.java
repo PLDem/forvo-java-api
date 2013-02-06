@@ -18,6 +18,7 @@ public class Main {
 		try {
 			Scanner sc = new Scanner(System.in);
 			ApiKey.setKey(sc.nextLine());
+            ApiKey.setHost(sc.nextLine());
 			List<Pronunciation> l =
 				new Word(sc.nextLine()).getPronunciations();
 			for(Pronunciation p : l) {

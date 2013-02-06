@@ -23,11 +23,12 @@ public class ForvoNet {
     throws Exception {
 
 		String apiKey = ApiKey.getKey();
+        String host = ApiKey.getHost();
 		// action
 		String format = "json";
 
 		StringBuilder sb = new StringBuilder();
-		sb.append("http://apifree.forvo.com");
+		sb.append("http://" + host);
 		sb.append("/key/" + apiKey);
 		sb.append("/format/" + format);
 		sb.append("/action/"+action);

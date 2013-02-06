@@ -2,6 +2,7 @@ package ru.o2genum.forvo;
 
 public class ApiKey {
 	static String key = "";
+    static String host = "apifree.forvo.com";
 
     /**
      * Set API key. You can obtain it at {@link 
@@ -12,6 +13,21 @@ public class ApiKey {
 	public static void setKey(String apiKey) {
 		key = apiKey;
 	}
+
+    /**
+     * Set host address. Depends on your plan (free or premium),
+     * defaults to <code>apifree.forvo.com</code>
+     */
+    public static void setHost(String newHost) {
+        host = newHost;
+    }
+
+    /**
+     * Get host address.
+     */
+    public static String getHost() {
+        return host;
+    }
 
     /**
      * Get (preset) API key. Just for symmetry.

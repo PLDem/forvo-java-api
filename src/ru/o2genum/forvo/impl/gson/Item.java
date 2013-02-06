@@ -28,5 +28,5 @@ public class Item {
 
 	public int num_positive_votes;
 	// Oops! Sometimes num_positive_votes is int:
-	// http://apifree.forvo.com/key/bd1ea80089bf823e55791eff92168548/format/json/action/word-pronunciations/word/cat/language/en
+	// http://apifree.forvo.com/key/<key>/format/json/action/word-pronunciations/word/cat/language/en
 }
